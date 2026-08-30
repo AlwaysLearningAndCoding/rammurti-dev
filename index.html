@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ram Murti — About</title>
+<meta name="description" content="Ram Murti — Staff Engineer & Engineering Manager, Financial Instruments & Account Updater at PayPal. 15+ years building payments systems.">
+
+<style>
+  /* ============================================================
+     EDITABLE CONTENT LIVES IN THE HTML BELOW.
+     This stylesheet rarely needs to change — to update the page,
+     just edit the text between the tags further down.
+     ============================================================ */
+
+  :root{
+    --bg: #fbfaf8;
+    --bg-alt: #f2f0eb;
+    --ink: #1c1b19;
+    --ink-soft: #55524c;
+    --ink-faint: #8a8579;
+    --accent: #8a4a2f;
+    --accent-soft: #f1e3da;
+    --line: #e4e0d8;
+    --radius: 14px;
+    --maxw: 780px;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg: #171614;
+      --bg-alt: #1f1d1a;
+      --ink: #f2efe9;
+      --ink-soft: #c7c2b8;
+      --ink-faint: #8f8a7d;
+      --accent: #e0a37c;
+      --accent-soft: #2c2420;
+      --line: #322f2a;
+    }
+  }
+
+  *{ box-sizing: border-box; }
+
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a{ color: var(--accent); text-decoration: none; }
+  a:hover{ text-decoration: underline; }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* --- Nav --- */
+  nav.top{
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  nav.top .brand{
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+  nav.top .brand:hover{ text-decoration: none; }
+  nav.top .links a{
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin-left: 20px;
+  }
+  nav.top .links a:hover{ color: var(--accent); }
+
+  /* --- Hero --- */
+  header.hero{
+    padding: 72px 0 40px;
+  }
+  .eyebrow{
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    margin: 0 0 14px;
+  }
+  h1{
+    font-size: clamp(2.1rem, 5vw, 2.9rem);
+    line-height: 1.12;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+  .title-line{
+    font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+    color: var(--ink-soft);
+    margin: 0 0 22px;
+  }
+  .title-line strong{ color: var(--ink); font-weight: 600; }
+
+  .cta-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    border: 1px solid var(--line);
+  }
+  .btn.primary{
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+  .btn.primary:hover{ opacity: 0.88; text-decoration: none; }
+  .btn.ghost{ color: var(--ink); }
+  .btn.ghost:hover{ background: var(--bg-alt); text-decoration: none; }
+
+  /* --- Stats --- */
+  section.stats{
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 32px 0;
+    margin: 20px 0 48px;
+  }
+  .stats-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .stat b{
+    display: block;
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+    color: var(--accent);
+    letter-spacing: -0.01em;
+  }
+  .stat span{
+    display: block;
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    margin-top: 4px;
+  }
+
+  /* --- Sections --- */
+  section{ margin: 56px 0; }
+  h2{
+    font-size: 1.4rem;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+  }
+  .lede p{
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+    margin: 0 0 16px;
+  }
+
+  /* --- Skills grid --- */
+  .skills-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .skill-cat h3{
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-faint);
+    margin: 0 0 10px;
+  }
+  .tag-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .tag{
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+
+  /* --- Experience timeline --- */
+  .job{
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+  }
+  .job:last-child{ border-bottom: 1px solid var(--line); }
+  .job-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-bottom: 8px;
+  }
+  .job-title{ font-weight: 600; font-size: 1.02rem; }
+  .job-dates{
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    white-space: nowrap;
+  }
+  .job ul{
+    margin: 0;
+    padding-left: 20px;
+    color: var(--ink-soft);
+  }
+  .job li{ margin-bottom: 6px; }
+
+  /* --- Recognition / list-y section --- */
+  .plain-list{
+    list-style: none;
+    margin: 0; padding: 0;
+    color: var(--ink-soft);
+  }
+  .plain-list li{
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+  }
+  .plain-list li:last-child{ border-bottom: 1px solid var(--line); }
+
+  .note{
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  /* --- Footer --- */
+  footer{
+    border-top: 1px solid var(--line);
+    padding: 40px 0 60px;
+    margin-top: 60px;
+  }
+  footer h2{ margin-bottom: 10px; }
+  footer p{ color: var(--ink-soft); margin: 0 0 20px; }
+  footer .foot-meta{
+    margin-top: 40px;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+  }
+
+  @media (max-width: 620px){
+    .stats-grid{ grid-template-columns: repeat(2, 1fr); row-gap: 24px; }
+    .skills-grid{ grid-template-columns: 1fr; }
+    nav.top .links a{ margin-left: 14px; font-size: 0.88rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Ram Murti</a>
+    <div class="links">
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero" id="top">
+    <p class="eyebrow">About</p>
+    <h1>Ram Murti</h1>
+    <p class="title-line"><strong>Staff Engineer &amp; Engineering Manager</strong>, Financial Instruments &amp; Account Updater · PayPal</p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:rammurti4642@gmail.com">Get in touch</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/rammurti4642" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stat"><b>15+</b><span>Years in payments engineering</span></div>
+      <div class="stat"><b>6–10+</b><span>Engineers led as manager</span></div>
+      <div class="stat"><b>2</b><span>Fortune-500-scale orgs (PayPal, PepsiCo)</span></div>
+      <div class="stat"><b>2011</b><span>B.Tech graduate</span></div>
+    </div>
+  </section>
+
+  <section class="lede">
+    <p>I build systems that move money reliably, at scale, and I build the teams that keep them that way. For 15+ years I've worked across the payments and wallet domain — as an individual contributor writing the code and, since being promoted to manager in January 2026, as a leader who stays close to the system design and the pager.</p>
+    <p>Today I lead engineering for Financial Instruments &amp; Account Updater at PayPal, where I manage 6–10+ engineers while remaining hands-on: reviewing code, shaping architecture, and leading incident response. My background is primarily Java and the JVM, working with GCP (Spanner, BigQuery, Dataflow), Oracle, and Kafka to keep high-throughput, high-reliability payment flows running.</p>
+  </section>
+
+  <section id="skills">
+    <h2>What I work with</h2>
+    <div class="skills-grid">
+      <div class="skill-cat">
+        <h3>Languages &amp; Frameworks</h3>
+        <div class="tag-row">
+          <span class="tag">Java</span>
+          <span class="tag">J2EE</span>
+          <span class="tag">Spring Boot</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h3>Data &amp; Cloud</h3>
+        <div class="tag-row">
+          <span class="tag">GCP · Spanner</span>
+          <span class="tag">BigQuery</span>
+          <span class="tag">Dataflow</span>
+          <span class="tag">Oracle</span>
+          <span class="tag">Kafka</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h3>Domain Expertise</h3>
+        <div class="tag-row">
+          <span class="tag">Payments</span>
+          <span class="tag">Financial Instruments</span>
+          <span class="tag">Idempotency &amp; Sagas</span>
+          <span class="tag">Outbox Pattern</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h3>Leadership</h3>
+        <div class="tag-row">
+          <span class="tag">People Management</span>
+          <span class="tag">Incident Response</span>
+          <span class="tag">System Design</span>
+          <span class="tag">Mentoring</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Staff Engineer / Engineering Manager, Financial Instruments &amp; Account Updater · PayPal</span>
+        <span class="job-dates">Jan 2026 – Present</span>
+      </div>
+      <ul>
+        <li>Lead a team of 6–10+ engineers, promoted from individual contributor into people management.</li>
+        <li>Stay hands-on: write and review code, contribute to system design, and lead incident response.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Senior / Lead Software Engineer · PayPal</span>
+        <span class="job-dates">2019 – 2025</span>
+      </div>
+      <ul>
+        <li>Worked across the payments and wallet domain as an individual-contributor engineer.</li>
+        <li>Built and operated high-throughput services on GCP (Spanner, BigQuery, Dataflow), Oracle, and Kafka.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <span class="job-title">Lead Java / J2EE Developer · Infosys (client: PepsiCo)</span>
+        <span class="job-dates">2012 – 2019</span>
+      </div>
+      <ul>
+        <li>Delivered Java/J2EE systems for PepsiCo as an Infosys engagement.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="recognition">
+    <h2>Recognition &amp; involvement</h2>
+    <ul class="plain-list">
+      <!-- EDIT ME: add awards, certifications, speaking, community involvement, etc.
+           Copy a line below and edit the text, or delete the ones you don't need. -->
+      <li>Add an award, certification, or community role here</li>
+      <li>Add another item here</li>
+    </ul>
+    <p class="note">This section is a placeholder — swap in your own certifications, awards, or community involvement.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p class="lede" style="margin:0;"><span style="color:var(--ink-soft)">B.Tech, graduated 2011.</span> <!-- EDIT ME: add your field of study and university name --></p>
+  </section>
+
+</div>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's connect</h2>
+    <p>Reach out about payments engineering, team leadership, or anything Java &amp; distributed systems.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:rammurti4642@gmail.com">rammurti4642@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/rammurti4642" target="_blank" rel="noopener">linkedin.com/in/rammurti4642</a>
+    </div>
+    <p class="foot-meta">&copy; <span id="year">2026</span> Ram Murti</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
