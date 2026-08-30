@@ -134,6 +134,24 @@
   .btn.ghost{ color: var(--ink); }
   .btn.ghost:hover{ background: var(--bg-alt); text-decoration: none; }
 
+  .icon-row{
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .icon-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .icon-btn:hover{ background: var(--bg-alt); border-color: var(--accent); text-decoration: none; }
+  .icon-btn svg{ width: 20px; height: 20px; display: block; }
+
   /* --- Stats --- */
   section.stats{
     border-top: 1px solid var(--line);
@@ -285,8 +303,8 @@
     <h1>Ram Murti</h1>
     <p class="title-line"><strong>Staff Engineer &amp; Engineering Manager</strong>, Financial Instruments &amp; Account Updater · PayPal</p>
     <div class="cta-row">
-      <a class="btn primary" href="mailto:rammurti4642@gmail.com">Get in touch</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/rammurti4642" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn primary" data-mailto href="#">Get in touch</a>
+      <a class="btn ghost" data-linkedin href="#" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </header>
 
@@ -405,14 +423,27 @@
   <div class="wrap">
     <h2>Let's connect</h2>
     <p>Reach out about payments engineering, team leadership, or anything Java &amp; distributed systems.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="mailto:rammurti4642@gmail.com">rammurti4642@gmail.com</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/rammurti4642" target="_blank" rel="noopener">linkedin.com/in/rammurti4642</a>
+    <div class="icon-row">
+      <a class="icon-btn" data-mailto href="#" aria-label="Email Ram Murti">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 13.065 2.4 6h19.2L12 13.065ZM2 8.202V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.202l-9.386 7.148a1 1 0 0 1-1.228 0L2 8.202Z"/></svg>
+      </a>
+      <a class="icon-btn" data-linkedin href="#" target="_blank" rel="noopener" aria-label="Ram Murti on LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z"/></svg>
+      </a>
     </div>
     <p class="foot-meta">&copy; <span id="year">2026</span> Ram Murti</p>
   </div>
 </footer>
 
+<script>
+(function(){
+  var u = String.fromCharCode(114,97,109,109,117,114,116,105,52,54,52,50);
+  var d = String.fromCharCode(103,109,97,105,108,46,99,111,109);
+  var email = u + '@' + d;
+  document.querySelectorAll('[data-mailto]').forEach(function(el){ el.setAttribute('href', 'mailto:' + email); });
+  document.querySelectorAll('[data-linkedin]').forEach(function(el){ el.setAttribute('href', 'https://www.linkedin.com/in/' + u); });
+})();
+</script>
+
 </body>
 </html>
-
